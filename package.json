@@ -1,0 +1,26 @@
+{
+  "name": "log-that-http",
+  "description": "Logs outgoing http requests and responses.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ari Autio",
+    "email": "ari.autio@iki.fi"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "eslint ./ && bash run-tests.sh"
+  },
+  "main": "index.js",
+  "files": [
+    "src/*"
+  ],
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "eslint": "^5.11.1",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0",
+    "node-fetch": "^2.3.0",
+    "request": "^2.88.0",
+    "sinon": "^7.2.2"
+  }
+}

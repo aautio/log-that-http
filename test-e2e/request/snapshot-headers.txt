@@ -1,0 +1,124 @@
+1 - request: GET localhost:8081/ok
+host: localhost:8081
+1 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+2 - request: POST localhost:8081/ok
+host: localhost:8081
+content-length: 11
+2 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+3 - request: DELETE localhost:8081/ok
+host: localhost:8081
+content-length: 0
+3 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+4 - request: GET localhost:8081/redirect
+host: localhost:8081
+4 - response: HTTP/1.1 302 Found
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /ok
+Vary: Accept
+Content-Type: text/plain; charset=utf-8
+Content-Length: 25
+Connection: close
+5 - request: GET localhost:8081/ok
+referer: http://localhost:8081/redirect
+host: localhost:8081
+5 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+6 - request: GET localhost:8081/not_found
+host: localhost:8081
+6 - response: HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 9
+ETag: W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
+Connection: close
+7 - request: GET localhost:8081/close_without_response
+host: localhost:8081
+8 - request: GET localhost:8081/corrupted
+host: localhost:8081
+9 - request: GET localhost:8443/ok
+host: localhost:8443
+9 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+10 - request: POST localhost:8443/ok
+host: localhost:8443
+content-length: 0
+10 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+11 - request: DELETE localhost:8443/ok
+host: localhost:8443
+content-length: 0
+11 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+12 - request: GET localhost:8443/redirect
+host: localhost:8443
+12 - response: HTTP/1.1 302 Found
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /ok
+Vary: Accept
+Content-Type: text/plain; charset=utf-8
+Content-Length: 25
+Connection: close
+13 - request: GET localhost:8443/ok
+referer: https://localhost:8443/redirect
+host: localhost:8443
+13 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+14 - request: GET localhost:8443/not_found
+host: localhost:8443
+14 - response: HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 9
+ETag: W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
+Connection: close
+15 - request: GET localhost:8443/close_without_response
+host: localhost:8443
+16 - request: GET localhost:8443/corrupted
+host: localhost:8443

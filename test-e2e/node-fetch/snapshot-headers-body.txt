@@ -1,0 +1,179 @@
+1 - request: GET localhost:8081/ok
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+connection: close
+host: localhost:8081
+1 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+2 - request: POST localhost:8081/ok
+content-type: text/plain;charset=UTF-8
+accept: */*
+content-length: 11
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+connection: close
+host: localhost:8081
+2 - request body:
+HELLO WORLD
+2 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+3 - request: DELETE localhost:8081/ok
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+connection: close
+host: localhost:8081
+3 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+4 - request: GET localhost:8081/redirect
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+connection: close
+host: localhost:8081
+4 - response: HTTP/1.1 302 Found
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /ok
+Vary: Accept
+Content-Type: text/plain; charset=utf-8
+Content-Length: 25
+Connection: close
+5 - request: GET localhost:8081/ok
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+connection: close
+host: localhost:8081
+5 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+6 - request: GET localhost:8081/not_found
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+connection: close
+host: localhost:8081
+6 - response: HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 9
+ETag: W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
+Connection: close
+7 - request: GET localhost:8081/close_without_response
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+connection: close
+host: localhost:8081
+8 - request: GET localhost:8081/corrupted
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+connection: close
+host: localhost:8081
+9 - request: GET localhost:8443/ok
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+host: localhost:8443
+9 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+10 - request: POST localhost:8443/ok
+accept: */*
+content-length: 0
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+host: localhost:8443
+10 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+11 - request: DELETE localhost:8443/ok
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+host: localhost:8443
+11 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+12 - request: GET localhost:8443/redirect
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+host: localhost:8443
+12 - response: HTTP/1.1 302 Found
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /ok
+Vary: Accept
+Content-Type: text/plain; charset=utf-8
+Content-Length: 25
+Connection: close
+13 - request: GET localhost:8443/ok
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+host: localhost:8443
+13 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 2
+ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Connection: close
+14 - request: GET localhost:8443/not_found
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+host: localhost:8443
+14 - response: HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 9
+ETag: W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
+Connection: close
+15 - request: GET localhost:8443/close_without_response
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+host: localhost:8443
+16 - request: GET localhost:8443/corrupted
+accept: */*
+user-agent: node-fetch/1.0 (+https://github.com/bitinn/node-fetch)
+accept-encoding: gzip,deflate
+host: localhost:8443

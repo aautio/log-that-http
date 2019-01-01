@@ -1,0 +1,12 @@
+1 - request: GET localhost:8443/ok
+1 - response: HTTP/1.1 200 OK
+2 - request: POST localhost:8443/ok
+2 - response: HTTP/1.1 200 OK
+3 - request: DELETE localhost:8443/ok
+3 - response: HTTP/1.1 200 OK
+4 - request: GET localhost:8443/redirect
+4 - response: HTTP/1.1 302 Found
+5 - request: GET localhost:8443/not_found
+5 - response: HTTP/1.1 404 Not Found
+6 - request: GET localhost:8443/close_without_response
+7 - request: GET localhost:8443/corrupted
