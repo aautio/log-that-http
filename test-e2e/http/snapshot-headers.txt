@@ -3,31 +3,40 @@ host: localhost:8081
 1 - response: HTTP/1.1 200 OK
 X-Powered-By: Express
 Date: Thu, 01 Jan 1970 00:00:00 GMT
-Content-Type: text/plain; charset=utf-8
-Content-Length: 2
-ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Content-Type: text/html; charset=utf-8
+Content-Length: 16
+ETag: W/"10-W6LoAdeI0pd1jCO6cpZ405KIlrg"
 Connection: close
 2 - request: POST localhost:8081/ok
 host: localhost:8081
 2 - response: HTTP/1.1 200 OK
 X-Powered-By: Express
 Date: Thu, 01 Jan 1970 00:00:00 GMT
-Content-Type: text/plain; charset=utf-8
-Content-Length: 2
-ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+ETag: W/"19-oxWiMSweFLXbymhr9nrDBHHvFps"
 Connection: close
-3 - request: DELETE localhost:8081/ok
+3 - request: POST localhost:8081/ok
 host: localhost:8081
 3 - response: HTTP/1.1 200 OK
+X-Powered-By: Express
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+ETag: W/"19-oxWiMSweFLXbymhr9nrDBHHvFps"
+Connection: close
+4 - request: DELETE localhost:8081/ok
+host: localhost:8081
+4 - response: HTTP/1.1 200 OK
 X-Powered-By: Express
 Date: Thu, 01 Jan 1970 00:00:00 GMT
 Content-Type: text/plain; charset=utf-8
 Content-Length: 2
 ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
 Connection: close
-4 - request: GET localhost:8081/redirect
+5 - request: GET localhost:8081/redirect
 host: localhost:8081
-4 - response: HTTP/1.1 302 Found
+5 - response: HTTP/1.1 302 Found
 X-Powered-By: Express
 Date: Thu, 01 Jan 1970 00:00:00 GMT
 Location: /ok
@@ -35,16 +44,16 @@ Vary: Accept
 Content-Type: text/plain; charset=utf-8
 Content-Length: 25
 Connection: close
-5 - request: GET localhost:8081/not_found
+6 - request: GET localhost:8081/not_found
 host: localhost:8081
-5 - response: HTTP/1.1 404 Not Found
+6 - response: HTTP/1.1 404 Not Found
 X-Powered-By: Express
 Date: Thu, 01 Jan 1970 00:00:00 GMT
 Content-Type: text/plain; charset=utf-8
 Content-Length: 9
 ETag: W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
 Connection: close
-6 - request: GET localhost:8081/close_without_response
+7 - request: GET localhost:8081/close_without_response
 host: localhost:8081
-7 - request: GET localhost:8081/corrupted
+8 - request: GET localhost:8081/corrupted
 host: localhost:8081

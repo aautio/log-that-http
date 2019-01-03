@@ -1,5 +1,4 @@
-const includeHeaders = process.env.LOG_THAT_HTTP_HEADERS === "true";
-const includeBody = process.env.LOG_THAT_HTTP_BODY === "true";
+const { includeHeaders, includeBody } = require("./options");
 
 const request = (id, method, host, path, headers, body) => {
   const lines = [`${id} - request: ${method} ${host}${path}`];

@@ -3,9 +3,9 @@ host: localhost:8443
 1 - response: HTTP/1.1 200 OK
 X-Powered-By: Express
 Date: Thu, 01 Jan 1970 00:00:00 GMT
-Content-Type: text/plain; charset=utf-8
-Content-Length: 2
-ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Content-Type: text/html; charset=utf-8
+Content-Length: 16
+ETag: W/"10-W6LoAdeI0pd1jCO6cpZ405KIlrg"
 Connection: close
 2 - request: POST localhost:8443/ok
 host: localhost:8443
@@ -14,9 +14,9 @@ HELLO WORLD
 2 - response: HTTP/1.1 200 OK
 X-Powered-By: Express
 Date: Thu, 01 Jan 1970 00:00:00 GMT
-Content-Type: text/plain; charset=utf-8
-Content-Length: 2
-ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+ETag: W/"19-oxWiMSweFLXbymhr9nrDBHHvFps"
 Connection: close
 3 - request: DELETE localhost:8443/ok
 host: localhost:8443

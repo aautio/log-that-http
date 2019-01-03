@@ -13,6 +13,7 @@ describe("Testing LOG_THAT_HTTP_HEADERS=true LOG_THAT_HTTP_BODY=false", function
     const logger = require("../src/logger");
     sandbox.replace(logger, "log", spy);
 
+    delete require.cache[require.resolve("../src/options")];
     delete require.cache[require.resolve("../src/formatter")];
     process.env.LOG_THAT_HTTP_HEADERS = "true";
     require("../index");
@@ -23,6 +24,7 @@ describe("Testing LOG_THAT_HTTP_HEADERS=true LOG_THAT_HTTP_BODY=false", function
     close();
 
     process.env.LOG_THAT_HTTP_HEADERS = null;
+    delete require.cache[require.resolve("../src/options")];
     delete require.cache[require.resolve("../src/formatter")];
     delete require.cache[require.resolve("../index")];
     emitter.removeAllListeners();

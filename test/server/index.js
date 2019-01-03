@@ -15,11 +15,11 @@ app.use((req, res, next) => {
 });
 
 app.get("/ok", (req, res) => {
-  res.sendStatus(200);
+  res.send("ALL OK OVER HERE");
 });
 
 app.post("/ok", (req, res) => {
-  res.sendStatus(200);
+  res.json({ message: "ALL IS FINE" });
 });
 
 app.delete("/ok", (req, res) => {

@@ -35,6 +35,22 @@ function* main() {
   });
 
   yield new Promise((resolve, reject) => {
+    const req = http
+      .request(
+        { host: "localhost", port: 8081, path: "/ok", method: "POST" },
+        res => {
+          res.on("data", () => {
+            // reading the stream to finish processing
+          });
+          res.on("end", resolve);
+        }
+      )
+      .on("error", reject);
+
+    req.end("HELLO WORLD");
+  });
+
+  yield new Promise((resolve, reject) => {
     http
       .request(
         { host: "localhost", port: 8081, path: "/ok", method: "DELETE" },

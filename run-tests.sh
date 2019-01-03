@@ -2,7 +2,7 @@ set -euo pipefail
 
 mocharunner=$(<launch-mocha.js)
 
-for v in {11..6}; do
+for v in {11..8}; do
 
     echo "node@${v}: Starting tests"
     npx -q node@${v} -e "$mocharunner"
