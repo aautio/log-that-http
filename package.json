@@ -1,7 +1,7 @@
 {
   "name": "log-that-http",
   "description": "Logs outgoing http requests and responses.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Ari Autio",
     "email": "ari.autio@iki.fi"
