@@ -30,14 +30,16 @@ function attachEmitterTo(func, ...rest) {
   if (includeBody) {
     emitWithRequestBody(req, id);
   } else {
-    instance.emit(
-      "request",
-      id,
-      req.method,
-      req.getHeader("host"),
-      req.path,
-      req.getHeaders()
-    );
+    req.prependOnceListener("finish", () => {
+      instance.emit(
+        "request",
+        id,
+        req.method,
+        req.getHeader("host"),
+        req.path,
+        req.getHeaders()
+      );
+    });
   }
 
   req.prependOnceListener("response", function(

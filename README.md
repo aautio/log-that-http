@@ -38,6 +38,7 @@ Use the following environment variables to add more info:
 - [got](https://www.npmjs.com/package/got)
 - [node-fetch](https://www.npmjs.com/package/node-fetch)
 - [request](https://www.npmjs.com/package/request)
+- [superagent](https://www.npmjs.com/package/superagent)
 - [`http.get()` and `http.request()`](https://nodejs.org/api/http.html)
 - [`https.get()` and `https.request()`](https://nodejs.org/api/https.html)
 

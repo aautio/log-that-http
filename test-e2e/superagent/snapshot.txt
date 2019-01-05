@@ -1,0 +1,28 @@
+1 - request: GET localhost:8081/ok
+1 - response: HTTP/1.1 200 OK
+2 - request: POST localhost:8081/ok
+2 - response: HTTP/1.1 200 OK
+3 - request: DELETE localhost:8081/ok
+3 - response: HTTP/1.1 200 OK
+4 - request: GET localhost:8081/redirect
+4 - response: HTTP/1.1 302 Found
+5 - request: GET localhost:8081/ok
+5 - response: HTTP/1.1 200 OK
+6 - request: GET localhost:8081/not_found
+6 - response: HTTP/1.1 404 Not Found
+7 - request: GET localhost:8081/close_without_response
+8 - request: GET localhost:8081/corrupted
+9 - request: GET localhost:8443/ok
+9 - response: HTTP/1.1 200 OK
+10 - request: POST localhost:8443/ok
+10 - response: HTTP/1.1 200 OK
+11 - request: DELETE localhost:8443/ok
+11 - response: HTTP/1.1 200 OK
+12 - request: GET localhost:8443/redirect
+12 - response: HTTP/1.1 302 Found
+13 - request: GET localhost:8443/ok
+13 - response: HTTP/1.1 200 OK
+14 - request: GET localhost:8443/not_found
+14 - response: HTTP/1.1 404 Not Found
+15 - request: GET localhost:8443/close_without_response
+16 - request: GET localhost:8443/corrupted
